@@ -57,7 +57,7 @@ const CardDisplay = () => {
             <p>Dear {card.name},</p>
             <p>{card.message}</p>
             <p className="text-right">Happy Birthday!</p>
-            <p className="text-right">♥ {card.sender}</p>
+            <p className="text-right">♥ {card.yourname}</p>
           </div>
         </div>
       </div>

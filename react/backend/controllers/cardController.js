@@ -3,11 +3,11 @@ const { v4: uuidv4 } = require('uuid');
 
 // Create a new greeting card
 const createCard = async (req, res) => {
-    const { name, message } = req.body;
+    const { name,yourname, message } = req.body;
     const cardId = uuidv4(); // Generate a unique ID for the card
 
     try {
-        const card = new Card({ name, message, cardId });
+        const card = new Card({ name,yourname, message, cardId });
         await card.save();
         res.status(201).json({ message: 'Card created successfully', cardId });
 
