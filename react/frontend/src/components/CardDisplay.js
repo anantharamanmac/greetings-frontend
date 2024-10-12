@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import './CardDisplay.css'; // Ensure you have this CSS file
+import './CardDisplay.css'; 
 
 const CardDisplay = () => {
   const { cardId } = useParams();
@@ -30,15 +30,15 @@ const CardDisplay = () => {
       
       <div className="imgBox">
         <div className="bark"></div>
-        <img src="https://i.ibb.co/8gYd6Ng/lastofus.jpg" alt="Greeting Card" /> {/* Assuming your card has an imageUrl field */}
+        <img src="https://i.ibb.co/8gYd6Ng/lastofus.jpg" alt="Greeting Card" /> 
       </div>
       <div className="details">
-        <h4 className="color1">{card.title}</h4> {/* Use card title */}
-        <h4 className="color2 margin">{card.subtitle}</h4> {/* Use card subtitle */}
-        <p>Dear {card.recipientName},</p> {/* Assuming recipient name is in the database */}
-        <p>{card.message}</p> {/* Use card message */}
-        <p className="text-right">Happy Birthday!</p> {/* You can adjust this text */}
-        <p className="text-right">♥ {card.sender}</p> {/* Assuming sender's name is in the database */}
+        <h4 className="color1">{card.title}</h4> 
+        <h4 className="color2 margin">{card.subtitle}</h4>
+        <p>Dear {card.name},</p> 
+        <p>{card.message}</p> 
+        <p className="text-right">Happy Birthday!</p> 
+        <p className="text-right">♥ {card.sender}</p> 
       </div>
     </div>
     </div>
