@@ -14,7 +14,11 @@ mongoose.connect(process.env.MONGO_URI, {
 .catch(err => console.error(err));
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: 'https://greetings-frontend-7chgl8jcx-anantharamans-projects.vercel.app', // Replace with your frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the HTTP methods you want to allow
+    credentials: true // If you need to allow cookies to be sent
+}));
 app.use(express.json());
 
 // API routes
