@@ -36,16 +36,13 @@ const CardDisplay = () => {
 
   return (
     <div className="card-container">
-      {/* Buttons like a header */}
+      {/* Header */}
       <div className="header">
-        {/* <button onClick={handleCopyUrl} className="share-btn">Share</button> */}
         <h4 className='happy'>Happy Birthday</h4>
-        {/* <button onClick={() => navigate('/')} className="home-btn">Home</button> */}
       </div>
 
       {/* Card content */}
       <div className='happy'>
-        
         <div className="card"> 
           <div className="imgBox">
             <div className="bark"></div>
@@ -58,14 +55,21 @@ const CardDisplay = () => {
             <p>{card.message}</p>
             <p className="text-right">Happy Birthday!</p>
             <p className="text-right">♥ {card.yourname}</p>
+          
           </div>
+          <button onClick={handleCopyUrl} className="copy-url-btn">Copy URL</button>
         </div>
+        
       </div>
+
+      {/* Copy URL button */}
+     
 
       {/* Popup message */}
       {showPopup && <div className="popup">URL copied to clipboard!</div>}
     </div>
   );
+
 };
 
 export default CardDisplay;

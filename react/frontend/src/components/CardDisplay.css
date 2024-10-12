@@ -146,7 +146,7 @@ h4 {
 
 .popup {
     position: fixed;
-    top: 50px;
+    top: 70px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #4CAF50;
@@ -177,3 +177,20 @@ h4 {
     font-size: 15px;
     border-radius: 5px;
   }
+  .copy-url-btn {
+    background-color: #3498db; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    margin: 20px auto; /* Center the button with auto margins */
+    display: block; /* Make it a block element */
+    transition: background-color 0.3s ease; /* Transition effect */
+    width: 80%; /* Set width for mobile responsiveness */
+}
+
+.copy-url-btn:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}
