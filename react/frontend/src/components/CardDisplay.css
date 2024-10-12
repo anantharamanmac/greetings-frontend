@@ -122,18 +122,58 @@ h4 {
     text-align: right;
 }
 .happy {
-  font-size: 36px; /* Adjust the font size as needed */
+  font-size: 26px; /* Adjust the font size as needed */
   line-height: 1.2; /* Adjust line height for better spacing */
-  margin-bottom: 10px; /* Add some space below the title */
+  margin-bottom: 15px; /* Add some space below the title */
   text-align: center; /* Center the title text */
   color:#0a7359;
- margin-top: 6%;
+ 
 }
-.happy1 {
-    font-size: 36px; /* Adjust the font size as needed */
-    line-height: 1.2; /* Adjust line height for better spacing */
-    margin-bottom: 10px; /* Add some space below the title */
-    text-align: center; /* Center the title text */
-    color:#0a7359;
-   margin-top: 6%;
+
+.copy-success {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+
+.popup {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 101;
+    font-size: 14px;
+    animation: fadein 0.3s, fadeout 0.3s 2.7s;
+  }
+
+  .share-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .home-btn {
+    background-color: #2196F3;
+    color: white;
+  }
+
+  
+  .share-btn, .home-btn {
+    /* padding: 5px 10px; */
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
   }
