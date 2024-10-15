@@ -39,7 +39,7 @@ const LandingPage = () => {
         {/* Input for Recipient's Name */}
         <input 
           type="text" 
-          placeholder="Name of reciver" 
+          placeholder="Recipient Name" 
           value={name} 
           onChange={(e) => setName(e.target.value)} // Set recipient's name
           required 
