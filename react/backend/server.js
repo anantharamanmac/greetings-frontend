@@ -15,8 +15,8 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Middleware
 app.use(cors({
-    origin: 'https://greetontime.gforx.online', // Replace with your frontend URL
-    //origin: 'http://localhost:3000',
+    //origin: 'https://greetontime.gforx.online', // Replace with your frontend URL
+    origin: 'http://localhost:3000',
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the HTTP methods you want to allow
     credentials: true // If you need to allow cookies to be sent
 }));

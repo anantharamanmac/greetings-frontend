@@ -7,7 +7,7 @@ const CardDisplay = () => {
   const { cardId } = useParams();
   const navigate = useNavigate();
   const [card, setCard] = useState(null);
-  const [showPopup, setShowPopup] = useState(false); // Popup state
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     const fetchCard = async () => {
@@ -22,26 +22,33 @@ const CardDisplay = () => {
   }, [cardId]);
 
   const handleCopyUrl = () => {
-    const urlToCopy = window.location.href; // Get the current URL
+    const urlToCopy = window.location.href;
 
     navigator.clipboard.writeText(urlToCopy)
       .then(() => {
-        setShowPopup(true); // Show popup message
-        setTimeout(() => setShowPopup(false), 3000); // Hide popup after 3 seconds
+        setShowPopup(true);
+        setTimeout(() => setShowPopup(false), 3000);
       })
       .catch(error => console.error('Error copying to clipboard:', error));
+  };
+
+  const handleNavigateHome = () => {
+    navigate('/');
   };
 
   if (!card) return <div>Loading...</div>;
 
   return (
     <div className="card-container">
-      {/* Header */}
+      {/* Navbar with Home button */}
+      <div className="navbar">
+        <button onClick={handleNavigateHome} className="home-btn">Home</button>
+      </div>
+
       <div className="header">
         <h4 className='happy'>Happy Birthday</h4>
       </div>
 
-      {/* Card content */}
       <div className='happy'>
         <div className="card"> 
           <div className="imgBox">
@@ -55,21 +62,14 @@ const CardDisplay = () => {
             <p>{card.message}</p>
             <p className="text-right">Happy Birthday!</p>
             <p className="text-right">♥ {card.yourname}</p>
-          
           </div>
           <button onClick={handleCopyUrl} className="copy-url-btn">Copy URL</button>
         </div>
-        
       </div>
 
-      {/* Copy URL button */}
-     
-
-      {/* Popup message */}
       {showPopup && <div className="popup">URL copied to clipboard!</div>}
     </div>
   );
-
 };
 
 export default CardDisplay;

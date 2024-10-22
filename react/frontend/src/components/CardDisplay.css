@@ -159,24 +159,7 @@ h4 {
     animation: fadein 0.3s, fadeout 0.3s 2.7s;
   }
 
-  .share-btn {
-    background-color: #4CAF50;
-    color: white;
-  }
   
-  .home-btn {
-    background-color: #2196F3;
-    color: white;
-  }
-
-  
-  .share-btn, .home-btn {
-    /* padding: 5px 10px; */
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-    border-radius: 5px;
-  }
   .copy-url-btn {
     background-color: #3498db; /* Button color */
     color: white; /* Text color */
@@ -193,4 +176,39 @@ h4 {
 
 .copy-url-btn:hover {
     background-color: #2980b9; /* Darker shade on hover */
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #f8f9fa; /* Optional: gives a light gray background for the navbar */
+  }
+  
+  .home-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .home-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  
+ /* Ensure the Home button and navbar are visible in mobile view */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;  /* Center the button on smaller screens */
+        padding: 8px;
+    }
+
+    .home-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
