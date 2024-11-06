@@ -107,3 +107,49 @@
     padding: 8px; /* Smaller padding */
   }
 }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-icon-container {
+  position: relative;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 10px;
+  z-index: 100;
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dropdown-menu ul li {
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 100%;
+}
